@@ -1,6 +1,11 @@
 .dropdown-button{
   padding: 0;
 }
+
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+  background-color: #424242;
+}
+
 .nav-wrapper, a {
   color: #d8d8c8;
 }
