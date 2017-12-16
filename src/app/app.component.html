@@ -1,16 +1,16 @@
 <ul id="mobile-menu" class="side-nav">
   <li class="center-align"><a><h5 class="side-nav-title">Categorias</h5></a></li>
   <li><a [routerLink]="['/']"><i class="material-icons">local_movies</i> Filmes </a></li>
-  <li><a [routerLink]="['/people', id]"><i class="material-icons">face</i> Personagens </a></li>
-  <li><a [routerLink]="['/species', id]"><i class="material-icons">adb</i> Espécies </a></li>
-  <li><a [routerLink]="['/ships', id]"><i class="material-icons">flight_takeoff</i> Naves </a></li>
-  <li><a [routerLink]="['/vehicles', id]"><i class="material-icons">motorcycle</i> Veículos </a></li>
-  <li><a [routerLink]="['/planets', id]"><i class="material-icons">public</i> Planetas </a></li>
+  <li><a [routerLink]="['/people', 1]"><i class="material-icons">face</i> Personagens </a></li>
+  <li><a [routerLink]="['/species', 1]"><i class="material-icons">adb</i> Espécies </a></li>
+  <li><a [routerLink]="['/ships', 1]"><i class="material-icons">flight_takeoff</i> Naves </a></li>
+  <li><a [routerLink]="['/vehicles', 1]"><i class="material-icons">motorcycle</i> Veículos </a></li>
+  <li><a [routerLink]="['/planets', 1]"><i class="material-icons">public</i> Planetas </a></li>
 </ul>
 
 <ul materialize="dropdown" id="transport" class="dropdown-content">
-  <li><a [routerLink]="['/ships', id]"><i class="material-icons left">flight_takeoff</i>Naves </a></li>
-  <li><a [routerLink]="['/vehicles', id]"><i class="material-icons left"> motorcycle </i>Veículos</a></li>
+  <li><a [routerLink]="['/ships', 1]"><i class="material-icons left">flight_takeoff</i>Naves </a></li>
+  <li><a [routerLink]="['/vehicles', 1]"><i class="material-icons left"> motorcycle </i>Veículos</a></li>
 </ul>
 
 <div class="navbar-fixed">
@@ -25,10 +25,10 @@
           <a [routerLink]="['/']"><i class="material-icons left">local_movies</i> Filmes </a>
         </li>
         <li>
-          <a [routerLink]="['/people', id]"><i class="material-icons left">face</i> Personagens </a>
+          <a  [routerLink]="['/people', 1]"><i class="material-icons left">face</i> Personagens </a>
         </li>
         <li>
-          <a [routerLink]="['/species', id]"><i class="material-icons left">adb</i> Espécies </a>
+          <a  [routerLink]="['/species', 1]"><i class="material-icons left">adb</i> Espécies </a>
         </li>
         <li>
           <a class="dropdown-button" data-activates="transport">
@@ -36,7 +36,7 @@
           </a>
         </li>
         <li>
-          <a [routerLink]="['/planets', id]"><i class="material-icons left">public</i> Planetas </a>
+          <a  [routerLink]="['/planets', 1]"><i class="material-icons left">public</i> Planetas </a>
         </li>
       </ul>
   

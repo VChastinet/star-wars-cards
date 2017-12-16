@@ -1,5 +1,7 @@
 <app-loading></app-loading>
 
+<app-prev-next (newPage)="onPageChange($event)" [id]="id" [category]="category" class="arrows hide"></app-prev-next>
+
 <div class="container">
   <div class="cards-container scale-transition scale-out">
       <div *ngFor="let info of cardsData" class="cards">

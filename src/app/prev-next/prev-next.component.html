@@ -1,0 +1,17 @@
+<div class="actual-page">
+<p>{{ category }}: <strong>{{ id }}</strong></p>
+</div>
+
+<div class="main-arrows hide-on-small-only">
+  <a (click)="prev(category, id)">
+    <i class="material-icons large left">navigate_before</i>
+  </a>
+  <a (click)="next(category, id)">
+    <i class="material-icons large right">navigate_next</i>
+  </a>
+</div>
+
+<div class="hide-on-med-and-up">
+  <i (click)="prev()" class="material-icons medium left">play_arrow</i>
+  <i (click)="next()" class="material-icons medium right">play_arrow</i>
+</div>

@@ -1,0 +1,19 @@
+.material-icons{
+  color: #fdd835;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.medium.left{
+  transform: rotate(180deg);
+}
+
+.main-arrows{
+  margin: 0 3rem 0 3rem;
+}
+
+.actual-page{
+  color: #fdd835;
+  font-size: 1.3rem;
+  text-align: center;
+}

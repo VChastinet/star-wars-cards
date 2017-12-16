@@ -18,6 +18,7 @@ import { SpeciePageComponent } from './cards/species-cards/specie-page.component
 import { ShipPageComponent } from './cards/ships-cards/ship-page.component';
 import { VehiclePageComponent } from './cards/vehicles-cards/vehicle-page.component';
 import { PlanetPageComponent } from './cards/planets-cards/planet-page.component';
+import { PrevNextComponent } from './prev-next/prev-next.component';
 
 
 
@@ -32,7 +33,8 @@ import { PlanetPageComponent } from './cards/planets-cards/planet-page.component
     SpeciePageComponent,
     ShipPageComponent,
     VehiclePageComponent,
-    PlanetPageComponent
+    PlanetPageComponent,
+    PrevNextComponent
   ],
   imports: [
     BrowserModule,

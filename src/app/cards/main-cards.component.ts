@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 
 import { SwapiService } from '../services/swapi.service';
@@ -13,37 +13,48 @@ export class MainCardsComponent implements OnInit {
 
 cardsData: any;
 routeUrl: string;
+id;
+category;
 
-  constructor(private route: ActivatedRoute, private swapi: SwapiService) {
+  constructor(private route: ActivatedRoute, private router: Router,private swapi: SwapiService) {
     this.swapi = swapi;
     this.route = route;
+    this.router = router;
+  }
+
+  onPageChange(event){
+    let newCategory = event.newPage[0];
+    let newId = event.newPage[1];
+    this.router.navigate([newCategory, newId])
   }
 
   ngOnInit() {
     this.route.url.subscribe(urlSegment => {
       let section = null;
+      this.category = urlSegment[0];
+      this.id = urlSegment[1];
 
-      if (urlSegment[0]) section = urlSegment[0].path;
+      if (this.category) section = this.category.path;
 
       switch (section) {
         case 'people':
-          this.people();
+          this.people(this.id.path);
           this.routeUrl = '/person';
           break;
         case 'species':
-          this.species();
+          this.species(this.id.path);
           this.routeUrl = '/specie';
           break;
         case 'ships':
-          this.ships();
+          this.ships(this.id.path);
           this.routeUrl = '/ship';
           break;
         case 'planets':
-          this.planets();
+          this.planets(this.id.path);
           this.routeUrl = '/planet';
           break;
         case 'vehicles':
-          this.vehicles();
+          this.vehicles(this.id.path);
           this.routeUrl = '/vehicle';
           break;
         default:
@@ -67,15 +78,19 @@ routeUrl: string;
       this.cardsData.sort((a, b) => a.episode_id - b.episode_id);
 
       if (res) {
-        this.loaded();
+        this.loaded('films');
       }
     
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message); });
   }
 
-  people() {
-    this.swapi.getPeople().subscribe(res =>  {
+  people(id) {
+    this.swapi.getPeople(id).subscribe(res =>  {
       this.cardsData = res.results;
+
+      this.manageArrows(res)
 
       this.cardsData.forEach(element => {
         const id = element.url.match(/\d+/);
@@ -88,13 +103,16 @@ routeUrl: string;
         this.loaded();
       }
 
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message);
+    });
   }
 
-  species() {
-    this.swapi.getSpecies().subscribe(res =>  {
+  species(id) {
+    this.swapi.getSpecies(id).subscribe(res =>  {
       this.cardsData = res.results;
-
+      this.manageArrows(res)
       this.cardsData.forEach(element => {
         const id = element.url.match(/\d+/);
         element.id = id[0];
@@ -106,11 +124,14 @@ routeUrl: string;
         this.loaded();
       }
 
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message);
+    });
   }
 
-  ships() {
-    this.swapi.getStarships().subscribe(res =>  {
+  ships(id) {
+    this.swapi.getStarships(id).subscribe(res =>  {
       this.cardsData = res.results;
 
       this.cardsData.forEach(element => {
@@ -124,11 +145,13 @@ routeUrl: string;
         this.loaded();
       }
 
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message); });
   }
 
-  vehicles() {
-    this.swapi.getVehicles().subscribe(res =>  {
+  vehicles(id) {
+    this.swapi.getVehicles(id).subscribe(res =>  {
       this.cardsData = res.results;
 
       this.cardsData.forEach(element => {
@@ -142,11 +165,13 @@ routeUrl: string;
         this.loaded();
       }
 
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message); });
   }
 
-  planets() {
-    this.swapi.getPlanets().subscribe(res =>  {
+  planets(id) {
+    this.swapi.getPlanets(id).subscribe(res =>  {
       this.cardsData = res.results;
       this.cardsData.forEach(element => {
 
@@ -160,11 +185,31 @@ routeUrl: string;
         this.loaded();
       }
 
-    }, err => { throw new Error(err.message); });
+    }, err => {
+      alert('Desculpe, ocorreu um erro');
+      throw new Error(err.message); });
   }
 
-  loaded() {
+  loaded(category = null) {
     document.querySelector('app-loading').classList.add('hide');
     document.querySelector('.cards-container').classList.add('scale-in');
+
+    if(category != 'films'){
+      document.querySelector('.arrows').classList.remove('hide');
+    }
+  }
+
+  manageArrows(pages){
+    if(!pages.next){
+      document.querySelector('.large.right').classList.add('hide');
+    } else{
+      document.querySelector('.large.right').classList.remove('hide');
+    }
+    if(!pages.previous){
+      document.querySelector('.large.left').classList.add('hide');
+    } else{
+      document.querySelector('.large.left').classList.remove('hide');
+    }
+
   }
 }
