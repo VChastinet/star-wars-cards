@@ -1,27 +1,36 @@
 # GameCard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+## Projeto referente ao o cargo de desenvolvedor Front-end da Vox tecnologia
 
-## Development server
+## Rodando a aplicação:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    Para rodar aplicação, basta clonar o repositório e em seguinda, usando o terminal, digite "ng serve -o", ele irá iniciar o servidor e abrir o projeto no navegador padrão.
 
-## Code scaffolding
+Para gerar uma build basta digitar no console: `ng build` para a build de desenvolvimento ou `build --pro --aot=false` para a build final de produção.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Funcionamento da aplicação:
+  * A tela iniciação mostra cards com informações básicar de cada filme de Star-wars e um menu para navegar entre as várias categorias proporcionadas pela API _"swapi"_, caso uma categoria possua muitas informações é possivel nagevar entre as páginas atravez das setas.
+  
+  * Ao clicar em um dos cartões, a aplicação o levará para a página específica do cartão clicado, onde mostrará todas as informações disponíveis do item escolhido, a partir daí todos os items são links para sua própria página com suas próprias informações.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+  * Para retornar masta clicar na logo da barra de navegação ou em algum dos itens do menu.
 
-## Running unit tests
+## Ferramentas:
+Para a realização deste projeto foram utilizadas as seguintes ferramentas:
+> * Angular 5.  
+> * Angular CLI.  
+> * Materialize CSS.  
+> * Angular2 materialize.  
+> * Gulp.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Com o Gulp é possivel realizar o lint do CSS, com o comando `npm run gulp csslint` e após gerar uma build é possível otimizar as imagens e melhorar a compatibilidade do css com browsers mais antigos, bastando usar o comando `npm run gulp`.
 
-## Running end-to-end tests
+## Exemplo do projeto:
+Para ver um exemplo do projeto em produção, disponibilizei no github pages, bastando [acessar este link](https://vchastinet.github.io/SWcard-compendium/);
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![mobile](/exemples/main.PNG)
+![mobile](/exemples/mobile1.PNG)
+![mobile](/exemples/mobile2.PNG)
+![mobile](/exemples/cards.PNG)
+![mobile](/exemples/pages.PNG)
