@@ -1,0 +1,44 @@
+@media(min-width: 460px){
+  .card.small{
+    height: 13rem;
+  }
+}
+
+.card {
+  background-color: #d8d8c8;
+}
+
+.collection, .collection-item, .collection-header{
+  background-color: #d8d8c8 !important;
+}
+
+.content{
+  height: 8rem;
+  overflow: auto;
+}
+
+.tooltipped .notes:hover{
+  background-color: rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.tooltipped .notes{
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.header{
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.card-content ul {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.title{
+  color: #141414 !important;
+  text-shadow: 0 0 1px #fdd835 !important;
+}
