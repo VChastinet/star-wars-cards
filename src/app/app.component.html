@@ -1,12 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="http://1.bp.blogspot.com/-L4P8M3aAPsQ/Tn6qVw61_eI/AAAAAAAAA8Q/LjWpiudxRVs/s1600/cfx_slave1_3.jpg">
+<ul id="mobile-menu" class="side-nav">
+  <li class="center-align"><a><h5>Categorias</h5></a></li>
+  <li><a [routerLink]="['/']"><i class="material-icons">local_movies</i> Filmes </a></li>
+  <li><a [routerLink]="['/people', id]"><i class="material-icons">face</i> Personagens </a></li>
+  <li><a [routerLink]="['/species', id]"><i class="material-icons">adb</i> Espécies </a></li>
+  <li><a [routerLink]="['/ships', id]"><i class="material-icons">flight_takeoff</i> Naves </a></li>
+  <li><a [routerLink]="['/vehicles', id]"><i class="material-icons">motorcycle</i> Veículos </a></li>
+  <li><a [routerLink]="['/planets', id]"><i class="material-icons">public</i> Planetas </a></li>
+</ul>
+
+<ul materialize="dropdown" id="transport" class="dropdown-content">
+  <li><a [routerLink]="['/ships', id]"><i class="material-icons left">flight_takeoff</i>Naves </a></li>
+  <li><a [routerLink]="['/vehicles', id]"><i class="material-icons left"> motorcycle </i>Veículos</a></li>
+</ul>
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
   
-  <img width="300" alt="Angular Logo" src="http://vignette3.wikia.nocookie.net/starwars/images/5/5b/Imperial_Sentinel-class_shuttle.png/revision/latest/scale-to-width-down/500?cb=20161008235432">
+      <a materialize="sideNav" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a [routerLink]="['/']" class="brand-logo"><img src="../assets/starwars-yellow_border.png" alt="star wars logo"></a>
+  
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a [routerLink]="['/']"><i class="material-icons left">local_movies</i> Filmes </a>
+        </li>
+        <li>
+          <a [routerLink]="['/people', id]"><i class="material-icons left">face</i> Personagens </a>
+        </li>
+        <li>
+          <a [routerLink]="['/species', id]"><i class="material-icons left">adb</i> Espécies </a>
+        </li>
+        <li>
+          <a class="dropdown-button" data-activates="transport">
+            <i class="material-icons left">time_to_leave</i> Transportes <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/planets', id]"><i class="material-icons left">public</i> Planetas </a>
+        </li>
+      </ul>
+  
+    </div>
+  </nav>
 </div>
-<h2>Here are some links to help you start: </h2>
-<app-cards></app-cards>
+
+<img class="main-logo" src="../../assets/starwars-black_hor.png" alt="star wars vertical logo">
+
+<router-outlet></router-outlet>
+
+<footer class="page-footer grey darken-3">
+  <div class="footer-copyright">
+    <div i18n class="container">
+    © Victor Chastinet
+    <a class="grey-text text-lighten-4 right" href="https://www.github.com/vchastinet" target="_blank">github</a>
+    </div>
+  </div>
+</footer>
 

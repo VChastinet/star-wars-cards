@@ -1,0 +1,43 @@
+.dropdown-button{
+  padding: 0;
+}
+.nav-wrapper, a {
+  color: #d8d8c8;
+}
+i.left{
+  margin-right: 8px;
+}
+i.right{
+  margin-left: 3px;
+}
+
+.side-nav .material-icons{
+  margin-right: 10px
+}
+
+.brand-logo img{
+  width: 100px;
+  margin-left: 10px;
+}
+
+.side-nav a, .dropdown-content a{
+  color: #d8d8c8;
+}
+
+.side-nav h5{
+  margin-top: 20px;
+}
+
+.material-icons, .side-nav .material-icons{
+  color: #fdd835;
+}
+
+.dropdown-content, .nav-wrapper, .side-nav{
+  background-color: #424242;
+}
+
+.main-logo{
+  display: block;
+  margin: auto;
+  width: 30rem;
+}
