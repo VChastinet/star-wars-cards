@@ -1,0 +1,9 @@
+.preloader-wrapper{
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.hide{
+  display: none;
+}
