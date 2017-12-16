@@ -89,9 +89,7 @@ category;
   people(id) {
     this.swapi.getPeople(id).subscribe(res =>  {
       this.cardsData = res.results;
-
       this.manageArrows(res);
-
       this.cardsData.forEach(element => {
         const urlId = element.url.match(/\d+/);
         element.id = urlId[0];
@@ -133,7 +131,7 @@ category;
   ships(id) {
     this.swapi.getStarships(id).subscribe(res =>  {
       this.cardsData = res.results;
-
+      this.manageArrows(res);
       this.cardsData.forEach(element => {
         const urlId = element.url.match(/\d+/);
         element.id = urlId[0];
@@ -153,7 +151,7 @@ category;
   vehicles(id) {
     this.swapi.getVehicles(id).subscribe(res =>  {
       this.cardsData = res.results;
-
+      this.manageArrows(res);
       this.cardsData.forEach(element => {
         const urlId = element.url.match(/\d+/);
         element.id = urlId[0];
@@ -173,6 +171,7 @@ category;
   planets(id) {
     this.swapi.getPlanets(id).subscribe(res =>  {
       this.cardsData = res.results;
+      this.manageArrows(res);
       this.cardsData.forEach(element => {
 
         const urlId = element.url.match(/\d+/);
@@ -201,14 +200,14 @@ category;
 
   manageArrows(pages) {
     if (!pages.next) {
-      document.querySelector('.large.right').classList.add('hide');
+      document.querySelector('.nex').classList.add('hide');
     } else {
-      document.querySelector('.large.right').classList.remove('hide');
+      document.querySelector('.nex').classList.remove('hide');
     }
     if (!pages.previous) {
-      document.querySelector('.large.left').classList.add('hide');
+      document.querySelector('.prev').classList.add('hide');
     } else {
-      document.querySelector('.large.left').classList.remove('hide');
+      document.querySelector('.prev').classList.remove('hide');
     }
 
   }
