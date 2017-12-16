@@ -1,0 +1,30 @@
+@media(min-width: 460px){
+  .card.small{
+    height: 13rem;
+  }
+}
+
+.card {
+  background-color: #d8d8c8;
+}
+
+.header{
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.card-content ul {
+  font-size: 1.2rem;
+  margin-top: 0;  
+}
+
+.card-action{
+  text-align: center;
+}
+
+.card .card-action a{
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #424242;
+  color: #fdd835 !important;
+}
