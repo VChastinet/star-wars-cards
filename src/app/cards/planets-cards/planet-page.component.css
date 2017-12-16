@@ -1,0 +1,32 @@
+@media(min-width: 460px){
+  .card.small{
+    height: 13rem;
+  }
+}
+
+.card {
+  background-color: #d8d8c8;
+}
+
+.collection, .collection-item, .collection-header{
+  background-color: #d8d8c8 !important;
+}
+
+.content{
+  height: 8rem;
+  overflow: auto;
+}
+
+.header{
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.card-content ul {
+  font-size: 1.2rem;
+}
+
+.title{
+  color: #141414 !important;
+  text-shadow: 0 0 1px #fdd835 !important;
+}
