@@ -4,10 +4,10 @@
 .nav-wrapper, a {
   color: #d8d8c8;
 }
-i.left{
+.left{
   margin-right: 8px;
 }
-i.right{
+.right{
   margin-left: 3px;
 }
 
@@ -16,15 +16,15 @@ i.right{
 }
 
 .brand-logo img{
-  width: 100px;
   margin-left: 10px;
+  width: 100px;
 }
 
 .side-nav a, .dropdown-content a{
   color: #d8d8c8;
 }
 
-.side-nav h5{
+.side-nav .side-nav-title{
   margin-top: 20px;
 }
 

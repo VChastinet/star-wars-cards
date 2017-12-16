@@ -18,7 +18,7 @@
 }
 
 .tooltipped .notes:hover{
-  background-color: rgba(0, 0, 0, .1);
+  background-color: #0000006e;
   cursor: pointer;
   font-size: 1.2rem;
 }
@@ -29,8 +29,8 @@
 }
 
 .header{
-  font-weight: bold;
   color: #fdd835;
+  font-weight: bold;
 }
 
 .card-content ul {

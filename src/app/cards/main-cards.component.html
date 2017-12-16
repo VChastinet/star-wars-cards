@@ -4,7 +4,7 @@
     <div *ngFor="let info of cardsData" class="cards">
       <div class="card">
           <a [routerLink]="[routeUrl, info.id]" class="router-link">
-            <div *ngIf="info.title" class="card-title valign-wrapper"><h5>{{ info.title }}</h5></div>
+            <div *ngIf="info.title" class="card-title valign-wrapper"><h5 class="card-title-text">{{ info.title }}</h5></div>
             <div *ngIf="info.name" class="card-title valign-wrapper"><h5>{{ info.name }}</h5></div>
             <div class="card-image">
                 <img [src]="info.img" alt="starwars logo placeholder">
