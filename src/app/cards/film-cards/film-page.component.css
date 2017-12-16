@@ -23,8 +23,8 @@
 }
 
 .card .card-action a{
-  padding: 15px;
-  border-radius: 5px;
   background-color: #424242;
+  border-radius: 5px;
   color: #fdd835 !important;
+  padding: 15px;
 }

@@ -16,16 +16,16 @@ routeUrl: string;
 id;
 category;
 
-  constructor(private route: ActivatedRoute, private router: Router,private swapi: SwapiService) {
+  constructor(private route: ActivatedRoute, private router: Router, private swapi: SwapiService) {
     this.swapi = swapi;
     this.route = route;
     this.router = router;
   }
 
-  onPageChange(event){
-    let newCategory = event.newPage[0];
-    let newId = event.newPage[1];
-    this.router.navigate([newCategory, newId])
+  onPageChange(event) {
+    const newCategory = event.newPage[0];
+    const newId = event.newPage[1];
+    this.router.navigate([newCategory, newId]);
   }
 
   ngOnInit() {
@@ -69,8 +69,8 @@ category;
       this.cardsData = res.results;
 
       this.cardsData.forEach(element => {
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '../assets/hor-ep' + element.episode_id + '.png');
@@ -80,7 +80,7 @@ category;
       if (res) {
         this.loaded('films');
       }
-    
+  
     }, err => {
       alert('Desculpe, ocorreu um erro');
       throw new Error(err.message); });
@@ -90,11 +90,11 @@ category;
     this.swapi.getPeople(id).subscribe(res =>  {
       this.cardsData = res.results;
 
-      this.manageArrows(res)
+      this.manageArrows(res);
 
       this.cardsData.forEach(element => {
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '/assets/hor-people.png');
@@ -112,10 +112,10 @@ category;
   species(id) {
     this.swapi.getSpecies(id).subscribe(res =>  {
       this.cardsData = res.results;
-      this.manageArrows(res)
+      this.manageArrows(res);
       this.cardsData.forEach(element => {
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '/assets/hor-species.png');
@@ -135,8 +135,8 @@ category;
       this.cardsData = res.results;
 
       this.cardsData.forEach(element => {
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '/assets/hor-ships.png');
@@ -155,8 +155,8 @@ category;
       this.cardsData = res.results;
 
       this.cardsData.forEach(element => {
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '/assets/hor-vehicles.png');
@@ -175,8 +175,8 @@ category;
       this.cardsData = res.results;
       this.cardsData.forEach(element => {
 
-        const id = element.url.match(/\d+/);
-        element.id = id[0];
+        const urlId = element.url.match(/\d+/);
+        element.id = urlId[0];
       });
 
       this.cardsData.forEach(element => element.img = '/assets/hor-planets.png');
@@ -194,20 +194,20 @@ category;
     document.querySelector('app-loading').classList.add('hide');
     document.querySelector('.cards-container').classList.add('scale-in');
 
-    if(category != 'films'){
+    if (category !== 'films') {
       document.querySelector('.arrows').classList.remove('hide');
     }
   }
 
-  manageArrows(pages){
-    if(!pages.next){
+  manageArrows(pages) {
+    if (!pages.next) {
       document.querySelector('.large.right').classList.add('hide');
-    } else{
+    } else {
       document.querySelector('.large.right').classList.remove('hide');
     }
-    if(!pages.previous){
+    if (!pages.previous) {
       document.querySelector('.large.left').classList.add('hide');
-    } else{
+    } else {
       document.querySelector('.large.left').classList.remove('hide');
     }
 

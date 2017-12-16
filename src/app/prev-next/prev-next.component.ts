@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-prev-next',
@@ -19,14 +19,14 @@ export class PrevNextComponent implements OnInit {
   ngOnInit() {
   }
 
-  next(){
+  next() {
     let id = this.id.path;
     id++;
     this.newPage.emit({newPage: [this.category.path, id]});
 
   }
 
-  prev(){
+  prev() {
     let id = this.id.path;
     id--;
     this.newPage.emit({newPage: [this.category.path, id]});
