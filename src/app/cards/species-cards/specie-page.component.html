@@ -1,0 +1,25 @@
+<app-loading></app-loading>
+
+<div class="main-card scale-transition scale-out row">
+  <div *ngIf="card" class="col s12 m8 l6 offset-m2 offset-l3">
+    <h4 class="header">{{ card.name }}</h4>
+    <div class="card small horizontal">
+      <div class="card-image hide-on-small-only">
+        <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <ul>
+            <li><strong>Classe: </strong> {{ card.classification }}</li>
+            <li><strong>Designação: </strong>{{ card.designation }}</li>
+            <li><strong>Altura média: </strong>{{ card.average_height > 99? (card.average_height/100) + "m" : card.average_height + "cm" }}</li>
+            <li><strong>Espectativa de vida: </strong>{{ card.average_lifespan === "unknown" ? card.average_lifespan : card.average_lifespan + " anos"}}</li>
+            <li><strong>Idioma: </strong>{{ card.language }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<app-page-template [data]="batch"></app-page-template>

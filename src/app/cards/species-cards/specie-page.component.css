@@ -1,0 +1,18 @@
+@media(min-width: 460px){
+  .card.small{
+    height: 13rem;
+  }
+}
+
+.card {
+  background-color: #d8d8c8;
+}
+
+.header{
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.card-content ul {
+  font-size: 1.2rem;
+}
