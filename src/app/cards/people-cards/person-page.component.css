@@ -1,0 +1,29 @@
+@media(min-width: 460px){
+  .card.small{
+    height: 13rem;
+  }
+}
+
+.card {
+  background-color: #d8d8c8;
+}
+
+.tooltipped .notes:hover{
+  background-color: rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.tooltipped .notes{
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.header{
+  font-weight: bold;
+  color: #fdd835;
+}
+
+.card-content ul {
+  font-size: 1.2rem;
+}
