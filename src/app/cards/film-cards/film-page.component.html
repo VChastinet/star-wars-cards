@@ -1,27 +1,30 @@
 <app-loading></app-loading>
 
-<div class="main-card scale-transition scale-out row">
-  <div *ngIf="card" class="col s12 m8 l6 offset-m2 offset-l3">
-    <h4 class="header">{{ card.title }}</h4>
-    <div class="card small horizontal">
-      <div class="card-image hide-on-small-only">
-        <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <ul>
-            <li><strong>Episódio {{ card.episode_id }}</strong></li>
-            <li><strong>Diretor: </strong>{{ card.director }}</li>
-            <li><strong>Produtores: </strong>{{ card.producer }}</li>
-            <li><strong>Ano de lançamento: </strong>{{ card.release_date.split('-')[0] }}</li>
-          </ul>
+
+<div class="container">
+  <div class="main-card scale-transition scale-out row">
+    <div *ngIf="card" class="col s12 m8 l6 offset-m2 offset-l3">
+      <h4 class="header">{{ card.title }}</h4>
+      <div class="card small horizontal">
+        <div class="card-image hide-on-small-only">
+          <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
         </div>
-        <div class="card-action">
-          <a class="modal-trigger" href="#opening_crawl">Texto de abertura</a>
+        <div class="card-stacked">
+          <div class="card-content">
+            <ul>
+              <li><strong>Episódio {{ card.episode_id }}</strong></li>
+              <li><strong>Diretor: </strong>{{ card.director }}</li>
+              <li><strong>Produtores: </strong>{{ card.producer }}</li>
+              <li><strong>Ano de lançamento: </strong>{{ card.release_date.split('-')[0] }}</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <a class="modal-trigger" href="#opening_crawl">Texto de abertura</a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
 </div>
 
 <div class="card-info">

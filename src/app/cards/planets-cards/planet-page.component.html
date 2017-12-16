@@ -1,24 +1,26 @@
 <app-loading></app-loading>
 
-<div class="main-card scale-transition scale-out row">
-  <div *ngIf="card" class="col s12 m10 l6 offset-m1 offset-l3">
-    <h4 class="header">{{ card.name }}</h4>
-    <div class="card small horizontal">
-      <div class="card-image hide-on-small-only">
-        <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <ul>
-            <li><strong>Duração do dia: </strong> {{ card.rotation_period }} horas</li>
-            <li><strong>Duração do ano: </strong>{{ card.orbital_period }} dias</li>
-            <li><strong>Diametro: </strong>{{ card.diameter }} Km</li>
-            <li><strong>Gravidade (g): </strong>{{ card.gravity }}</li>
-          </ul>
+<div class="container">
+  <div class="main-card scale-transition scale-out row">
+    <div *ngIf="card" class="col s12 m10 l6 offset-m1 offset-l3">
+      <h4 class="header">{{ card.name }}</h4>
+      <div class="card small horizontal">
+        <div class="card-image hide-on-small-only">
+          <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <ul>
+              <li><strong>Duração do dia: </strong> {{ card.rotation_period }} horas</li>
+              <li><strong>Duração do ano: </strong>{{ card.orbital_period }} dias</li>
+              <li><strong>Diametro: </strong>{{ card.diameter }} Km</li>
+              <li><strong>Gravidade (g): </strong>{{ card.gravity }}</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
 </div>
 
 <app-page-template [data]="batch">

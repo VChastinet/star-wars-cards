@@ -1,28 +1,28 @@
 <app-loading></app-loading>
 
-<div class="main-card scale-transition scale-out row">
-  <div *ngIf="card" class="col s12 m8 l6 offset-m2 offset-l3">
-    <h4 class="header">{{ card.name }}</h4>
-    <div class="card small horizontal">
-      <div class="card-image hide-on-small-only">
-        <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <ul>
-            <li><strong>Altura: </strong> {{ card.height > 99? (card.height/100) + "m" : card.height + "cm" }}</li>
-            <li><strong>Peso: </strong>{{ card.mass }}Kg</li>
-            <li><strong>Sexo: </strong>{{ card.gender }}</li>
-            <li materialize="tooltip" class="tooltipped"  data-position="bottom" data-delay="80" data-tooltip="*Antes da Batalha de Yavin">
-              <strong>Data de nascimento </strong><span class="notes">{{ card.birth_year }}</span>*
-            </li>
-          </ul>
+<div class="container">
+  <div class="main-card scale-transition scale-out row">
+    <div *ngIf="card" class="col s12 m8 l6 offset-m2 offset-l3">
+      <h4 class="header">{{ card.name }}</h4>
+      <div class="card small horizontal">
+        <div class="card-image hide-on-small-only">
+          <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <ul>
+              <li><strong>Altura: </strong> {{ card.height > 99? (card.height/100) + "m" : card.height + "cm" }}</li>
+              <li><strong>Peso: </strong>{{ card.mass }}Kg</li>
+              <li><strong>Sexo: </strong>{{ card.gender }}</li>
+              <li materialize="tooltip" class="tooltipped"  data-position="bottom" data-delay="80" data-tooltip="*Antes da Batalha de Yavin">
+                <strong>Data de nascimento </strong><span class="notes">{{ card.birth_year }}</span>*
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
 </div>
 
-<div class="card-info">
-  <app-page-template [data]="batch"></app-page-template>
-</div>
+<app-page-template [data]="batch"></app-page-template>

@@ -1,25 +1,27 @@
 <app-loading></app-loading>
 
-<div class="main-card scale-transition scale-out row">
-  <div *ngIf="card" class="col s12 m10 l6 offset-m1 offset-l3">
-    <h4 class="header">{{ card.name }}</h4>
-    <div class="card small horizontal">
-      <div class="card-image hide-on-small-only">
-        <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <ul>
-            <li><strong>Modelo: </strong> {{ card.model }}</li>
-            <li><strong>Fabricante: </strong>{{ card.manufacturer }}</li>
-            <li><strong>Autonomia: </strong>{{ card.consumables }}</li>
-            <li><strong>Velocidade: </strong>{{ card.max_atmosphering_speed }} Km/h</li>
-            <li><strong>Classe: </strong>{{ card.vehicle_class }}</li>
-          </ul>
+<div class="container">
+  <div class="main-card scale-transition scale-out row">
+    <div *ngIf="card" class="col s12 m10 l6 offset-m1 offset-l3">
+      <h4 class="header">{{ card.name }}</h4>
+      <div class="card small horizontal">
+        <div class="card-image hide-on-small-only">
+          <img class="card-img" [src]="card.img" alt="starwars logo placeholder">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <ul>
+              <li><strong>Modelo: </strong> {{ card.model }}</li>
+              <li><strong>Fabricante: </strong>{{ card.manufacturer }}</li>
+              <li><strong>Autonomia: </strong>{{ card.consumables }}</li>
+              <li><strong>Velocidade: </strong>{{ card.max_atmosphering_speed }} Km/h</li>
+              <li><strong>Classe: </strong>{{ card.vehicle_class }}</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
 </div>
 
 <app-page-template [data]="batch">
