@@ -4,7 +4,7 @@
 
 ## Rodando a aplicação:
 
-    Para rodar aplicação, basta clonar o repositório e em seguinda, usando o terminal, digite "ng serve -o", ele irá iniciar o servidor e abrir o projeto no navegador padrão.
+    Para rodar aplicação, basta clonar o repositório e em seguinda, usando o terminal, rodar o comando "npm instal" para instalar as dependências necessárias. Por fim digite "ng serve -o", ele irá iniciar o servidor e abrir o projeto no navegador padrão.
 
 Para gerar uma build basta digitar no console: `ng build` para a build de desenvolvimento ou `build --pro --aot=false` para a build final de produção.
 
