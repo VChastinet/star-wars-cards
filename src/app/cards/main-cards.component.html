@@ -1,0 +1,52 @@
+<app-loading></app-loading>
+
+<div class="cards-container scale-transition scale-out">
+    <div *ngFor="let info of cardsData" class="cards">
+      <div class="card">
+          <a [routerLink]="[routeUrl, info.id]" class="router-link">
+            <div *ngIf="info.title" class="card-title valign-wrapper"><h5>{{ info.title }}</h5></div>
+            <div *ngIf="info.name" class="card-title valign-wrapper"><h5>{{ info.name }}</h5></div>
+            <div class="card-image">
+                <img [src]="info.img" alt="starwars logo placeholder">
+            </div>
+          </a>
+        <div class="card-content">
+            <ul *ngIf="info.title">
+              <li><strong>Episódio {{ info.episode_id }}</strong></li>
+              <li><strong>Diretor: </strong>{{ info.director }}</li>
+              <li><strong>Produtores: </strong>{{ info.producer }}</li>
+              <li><strong>Ano de lançamento: </strong>{{ info.release_date.split('-')[0] }}</li>
+            </ul>
+
+            <ul *ngIf="info.gender">
+              <li><strong>Altura: </strong>{{ info.height > 99? (info.height/100) + "m" : info.height + "cm" }}</li>
+              <li><strong>Peso: </strong>{{ info.mass }} kg</li>
+              <li><strong>Sexo: </strong>{{ info.gender }}</li>
+              <li><strong>Data de nascimento: </strong>{{ info.birth_year }}</li>
+            </ul>
+
+            <ul *ngIf="info.model">
+              <li><strong>Modelo: </strong>{{ info.model }}</li>
+              <li><strong>Fabricante: </strong>{{ info.manufacturer }}</li>
+              <li><strong>Custo: </strong>{{ info.cost_in_credits == "unknown" ? info.cost_in_credits : info.cost_in_credits| currency }}</li>
+              <li><strong>crew: </strong>{{ info.crew }}</li>
+            </ul>
+
+            <ul *ngIf="info.designation">
+              <li><strong>Classe: </strong>{{ info.classification }}</li>
+              <li><strong>Designação: </strong>{{ info.designation }}</li>
+              <li><strong>Altura média: </strong>{{ info.average_height > 99? (info.average_height/100) + "m" : info.average_height + "cm" }}</li>
+              <li><strong>Espectativa de vida: </strong>{{ info.release_date }} anos</li>
+            </ul>
+
+            <ul *ngIf="info.climate">
+              <li><strong>Duração do dia </strong>{{ info.climate }} horas</li>
+              <li><strong>Duração do ano: </strong>{{ info.rotation_period }} dias</li>
+              <li><strong>Diametro: </strong>{{ info.diameter }} km</li>
+              <li><strong>Gravidade (g): </strong>{{ info.gravity }}</li>
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+</div>
