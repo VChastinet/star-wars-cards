@@ -1,0 +1,71 @@
+<div class="container row">
+
+  <ng-content></ng-content>
+
+  <div *ngIf="data.people.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Personagens</h5></li>
+      <div class="content">
+        <a *ngFor="let person of data.people" class="collection-item" [routerLink]="['/person', person.id]" href="#">
+            <span class="title"><strong>{{ person.name }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.starships.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Espaçonaves</h5></li>
+      <div class="content">
+        <a *ngFor="let ship of data.starships" class="collection-item" [routerLink]="['/ship', ship.id]" href="#">
+          <span class="title"><strong>{{ ship.name }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.planets.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Planetas</h5></li>
+      <div class="content">
+        <a *ngFor="let planet of data.planets" class="collection-item" [routerLink]="['/planet', planet.id]" href="#">
+          <span class="title"><strong>{{ planet.name }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.vehicles.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>veículos</h5></li>
+      <div class="content">
+        <a *ngFor="let vehicle of data.vehicles" class="collection-item" [routerLink]="['/vehicle', vehicle.id]" href="#">
+          <span class="title"><strong>{{ vehicle.name }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.species.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Espécies</h5></li>
+      <div class="content">
+        <a *ngFor="let specie of data.species" class="collection-item" [routerLink]="['/specie', specie.id]" href="#">
+          <span class="title"><strong>{{ specie.name }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.films.length > 0" class="card-info col s12 m6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Filmes</h5></li>
+      <div class="content">
+        <a *ngFor="let film of data.films" class="collection-item" [routerLink]="['/film', film.id]" href="#">
+          <span class="title"><strong>{{ film.title }}</strong></span>
+        </a>
+      </div>
+    </ul>
+  </div>
+
+</div>

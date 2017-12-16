@@ -1,0 +1,13 @@
+.content{
+  height: 8rem;
+  overflow: auto;
+}
+
+.collection, .collection-item, .collection-header{
+  background-color: #d8d8c8 !important;
+}
+
+.title, strong{
+  color: #141414;
+  text-shadow: 0 0 1px #fdd835;
+}
