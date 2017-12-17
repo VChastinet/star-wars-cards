@@ -29,7 +29,7 @@ Com o Gulp é possivel realizar o lint do CSS, com o comando `npm run gulp cssli
 ## Exemplo do projeto:
 Para ver um exemplo do projeto em produção, disponibilizei no github pages, bastando [acessar este link](https://vchastinet.github.io/SWcard-compendium/);
 
-![mobile](/exemples/main.PNG)
+![mobile](/exemples/exemple.gif)
 ![mobile](/exemples/mobile1.PNG)
 ![mobile](/exemples/mobile2.PNG)
 ![mobile](/exemples/cards.PNG)
