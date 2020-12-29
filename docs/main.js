@@ -1355,7 +1355,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var SwapiService = (function () {
     function SwapiService(http) {
         this.http = http;
-        this.baseUrl = 'https://swapi.co/api/';
+        this.baseUrl = 'https://swapi.dev/api/';
     }
     // "people": "http://swapi.co/api/people/",
     // "planets": "http://swapi.co/api/planets/",
@@ -1634,7 +1634,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/vchastinet/Desktop/Programing/vox-cardgame/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/victorch/victor/star-wars-cards/src/main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vchastinet/Desktop/Programing/vox-cardgame/node_modules/materialize-css/dist/css/materialize.css */"./node_modules/materialize-css/dist/css/materialize.css");
-module.exports = __webpack_require__(/*! /home/vchastinet/Desktop/Programing/vox-cardgame/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /home/victorch/victor/star-wars-cards/node_modules/materialize-css/dist/css/materialize.css */"./node_modules/materialize-css/dist/css/materialize.css");
+module.exports = __webpack_require__(/*! /home/victorch/victor/star-wars-cards/src/styles.css */"./src/styles.css");
 
 
 /***/ })

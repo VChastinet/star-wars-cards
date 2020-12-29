@@ -5455,7 +5455,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/vchastinet/Desktop/Programing/vox-cardgame/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /home/victorch/victor/star-wars-cards/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
