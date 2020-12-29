@@ -9,7 +9,7 @@ import { HttpHeaderResponse } from '@angular/common/http/src/response';
 export class SwapiService {
   constructor(private http: HttpClient) { }
 
-  private baseUrl = 'https://swapi.co/api/';
+  private baseUrl = 'https://swapi.dev/api/';
 
   // "people": "http://swapi.co/api/people/",
   // "planets": "http://swapi.co/api/planets/",
